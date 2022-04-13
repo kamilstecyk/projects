@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\komis_samochodowy\komis_samochodowy\bin\Debug\komis_samochodowy.exe.config
+C:\Users\user\source\repos\komis_samochodowy\komis_samochodowy\bin\Debug\komis_samochodowy.exe
+C:\Users\user\source\repos\komis_samochodowy\komis_samochodowy\bin\Debug\komis_samochodowy.pdb
+C:\Users\user\source\repos\komis_samochodowy\komis_samochodowy\obj\Debug\komis_samochodowy.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\komis_samochodowy\komis_samochodowy\obj\Debug\komis_samochodowy.Properties.Resources.resources
+C:\Users\user\source\repos\komis_samochodowy\komis_samochodowy\obj\Debug\komis_samochodowy.csproj.GenerateResource.cache
+C:\Users\user\source\repos\komis_samochodowy\komis_samochodowy\obj\Debug\komis_samochodowy.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\komis_samochodowy\komis_samochodowy\obj\Debug\komis_samochodowy.exe
+C:\Users\user\source\repos\komis_samochodowy\komis_samochodowy\obj\Debug\komis_samochodowy.pdb
+C:\Users\user\source\repos\komis_samochodowy\komis_samochodowy\obj\Debug\komis_samochodowy.Form1.resources
+C:\Users\user\source\repos\komis_samochodowy\komis_samochodowy\obj\Debug\komis_samochodowy.Form2.resources
+C:\Users\user\source\repos\komis_samochodowy\komis_samochodowy\obj\Debug\komis_samochodowy.Form3.resources
+C:\Users\user\source\repos\komis_samochodowy\komis_samochodowy\obj\Debug\komis_samochodowy.Form4.resources
+C:\Users\user\source\repos\komis_samochodowy\komis_samochodowy\obj\Debug\komis_samochodowy.Form5.resources
+C:\Users\user\source\repos\komis_samochodowy\komis_samochodowy\obj\Debug\komis_samochodowy.Form6.resources
