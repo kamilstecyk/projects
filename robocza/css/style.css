@@ -1,0 +1,596 @@
+html
+{
+	scroll-behavior: smooth;
+}
+
+body
+{
+	background-image: linear-gradient(#7aedff,white);
+	color: white;
+	font-size: 25px;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0!important;
+	padding: 0!important;
+}
+
+.container
+{
+	/*display: grid;
+	grid-template-columns: 1fr 2fr;*/
+	width: 100%;
+	display: flex;
+	
+}
+
+header
+{
+	width: 100%;
+	border-top: 1px solid blue;
+	border-bottom: 2px solid blue;
+	min-height: 70px;
+	position: fixed;
+	top:0;
+	left:0;
+	box-shadow: 0 5px 5px 0px #4a89ff;
+	background-color: #0B3E52;
+	z-index: 100;
+	animation: menu-occur 3s ease-in-out;
+}
+
+header ul
+{	
+	position: absolute;
+	top:0;
+	right:0;
+	margin: 0;
+	font-size: 18px;
+	line-height: 350%;
+	text-align: center;
+	height: auto;
+	list-style-type: none;
+	float: left;
+	
+}
+
+
+header ul>li
+{
+	display: inline-block;
+	width: 150px;
+	height: 70px;
+	border-right:2px dotted #4a89ff;
+	color: #4a89ff;
+	text-align: center;
+	font-weight: 700;
+	
+	
+}
+
+header ul>li:first-child
+{
+	border-left: 2px dotted #4a89ff;
+}
+
+header ul>li:hover
+{
+	/*text-decoration: solid underline #4a89ff 4px;
+	text-underline-offset: 6px;
+	color: blue;*/
+	opacity: 0.6;
+
+}
+
+
+header ul a{
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  font-size: 14px;
+  color: #4a89ff;
+  display: block;
+}
+
+
+header ul a:hover::after {
+  width: 100%;
+  right: 0;
+}
+
+
+
+
+header ul a::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 4px;
+  right: 0;
+  position: absolute;
+  background: #4a89ff;
+  transition: width .5s ease 0s, right .5s ease 0s;
+  width: 0;
+}
+
+
+
+h1
+{
+	font-size: 40px;
+	text-align: left;
+	margin: 0;
+	padding: 5px 0 0 15px;
+	float: left;
+	letter-spacing: 2px;
+	
+}
+
+.img_main
+{	
+	flex-basis: 40%;
+	padding-top: 110px;
+	
+	
+}
+
+
+
+
+
+.main_description
+{	
+	
+	
+	color: black;
+	text-align: center;
+	font-size: 20px;
+	padding-top: 160px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: white;
+	flex-basis: 60%;
+	border-radius: 30px;
+}
+
+.page2
+{
+	min-height: 800px;
+	width: 100%;
+}
+
+.break1
+{
+	height: 160px;
+}
+
+.break2
+{
+	height: 230px;
+}
+
+.container ul
+{
+	list-style-type: none;
+	line-height: 250%;
+	
+}
+
+
+
+
+a.fb
+{
+	text-decoration: none;
+	display: block;
+	width: 240px;height:190px;
+	text-align: center;
+	background-color: #4668b3;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	transition: transform 0.5s ease-in-out ;
+}
+
+a.fb:hover
+{
+	background-color: #3557a2;
+	opacity: 0.7;
+	transform: skew(5deg,5deg);
+	
+}
+
+#toggler
+{
+	display: none;
+}
+
+footer
+{
+	width: 100%;
+	height: 40px;
+	background-color: #0B3E52;
+	color: white;
+	text-align: center;
+	font-size: 24px;
+	padding-top: 10px;
+}
+
+
+
+#j
+{
+	animation: letter-loading 0.75s ease-in-out 0.15s forwards;opacity: 0;
+
+}
+
+#e
+{
+	animation: letter-loading  0.75s ease-in-out 0.3s forwards;opacity: 0;
+
+}
+#z
+{
+	animation: letter-loading  0.75s ease-in-out 0.45s forwards;opacity: 0;
+
+}
+#y
+{
+	animation: letter-loading  0.75s ease-in-out 0.6s forwards;opacity: 0;
+
+}
+#c
+{
+	animation: letter-loading  0.75s ease-in-out 0.75s forwards;opacity: 0;
+
+}
+#z2
+{
+	animation: letter-loading  0.75s ease-in-out 0.9s forwards;opacity: 0;
+
+}
+#e2
+{
+	animation: letter-loading  0.75s ease-in-out 1.05s forwards;opacity: 0;
+
+}
+#k
+{
+	animation: letter-loading  0.75s ease-in-out 1.2s forwards;opacity: 0;
+
+}
+
+
+
+
+
+
+
+#p
+{
+	animation: letter-loading2 0.5s ease-in 1.8s forwards;opacity: 0;
+
+}
+
+#e3
+{
+	animation: letter-loading2 0.5s ease-in 1.9s forwards;opacity: 0;
+
+}
+#n
+{
+	animation: letter-loading2 0.5s ease-in 2.05s forwards;opacity: 0;
+
+}
+#t
+{
+	animation: letter-loading2 0.5s ease-in 2.2s forwards;opacity: 0;
+
+}
+#l
+{
+	animation: letter-loading2 0.5s ease-in 2.35s forwards;opacity: 0;
+
+}
+#i
+{
+	animation: letter-loading2 0.5s ease-in 2.5s forwards;opacity: 0;
+
+}
+#c2
+{
+	animation: letter-loading2 0.5s ease-in 2.65s forwards;opacity: 0;
+
+}
+#z3
+{
+	animation: letter-loading2 0.5s ease-in 2.8s forwards;opacity: 0;
+
+}
+#e4
+{
+	animation: letter-loading2 0.5s ease-in 2.95s forwards;opacity: 0;
+
+}
+#k2
+{
+	animation: letter-loading2 0.5s ease-in 3.1s forwards;opacity: 0;
+
+}
+
+
+#img1
+{
+	animation: div-inleft 1.75s ease-in forwards;
+}
+#desc1
+{
+	animation: div-inright 1.75s ease-in forwards;
+}
+
+
+nav.active
+{
+	animation: collapse-menu 1s ease-in-out forwards;
+	display: block;
+	
+}
+
+
+header ul.active
+{
+	animation: list-fadein 2s ease-in-out forwards;
+}
+
+
+nav.hide
+{
+	animation: hide-menu 1s ease-in-out forwards;
+	display: block;
+}
+
+header ul.fade
+{
+	animation: list-fade-out 0.5s ease forwards;
+}
+
+
+
+@media screen and (max-width: 1185px)
+{
+	
+	header{margin-left: auto;margin-right: auto;}
+	nav{display: none;}
+	h1{float:none;text-align: center;letter-spacing: 10px;}
+	h1:after{font-size: 30px; margin-left:10px;}
+	header ul{float:none;position:static;width: 100%;padding:20px 0 0 0;}
+	header ul>li{display:block;width:100%;border:0px dotted #4a89ff;box-shadow: 0 5px 5px 0px #4a89ff;font-size:28px;height:80px;}
+	header ul>li:first-child{border-left: 0px dotted #4a89ff;}
+	header ul a{font-size: 28px;}
+	.container{flex-direction: column;align-content: center;text-align: center;}
+	.img_main{flex-basis: 100%; margin-top: 40px;text-align:center!important;}
+	.main_description{flex-basis: 100%;padding-top: 20px;padding-bottom: 20px;margin-top: 40px;font-size: 14px;padding}
+	#toggler{display: block;position: fixed; top:10px;right:20px;}
+	.break1{height:0;}
+	
+	header ul a:hover::after {width: 0;right: 0;}  /*to turn off animation on phone*/
+	footer{font-size: 18px;}
+
+		
+	#j
+	{
+		animation: none;opacity: 1;
+
+	}
+
+	#e
+	{
+		animation: none;opacity: 1;
+	}
+	#z
+	{
+		animation: none;opacity: 1;
+	}
+	#y
+	{
+		animation: none;opacity: 1;
+	}
+	#c
+	{
+		animation: none;opacity: 1;
+	}
+	#z2
+	{
+		animation: none;opacity: 1;
+	}
+	#e2
+	{
+		animation: none;opacity: 1;
+	}
+	#k
+	{
+		animation: none;opacity: 1;
+	}
+
+
+
+
+
+
+
+	#p
+	{
+		animation: none;opacity: 1;
+	}
+
+	#e3
+	{
+		animation: none;opacity: 1;
+	}
+	#n
+	{
+		animation: none;opacity: 1;
+	}
+	#t
+	{
+		animation: none;opacity: 1;
+	}
+	#l
+	{
+		animation: none;opacity: 1;
+	}
+	#i
+	{
+		animation: none;opacity: 1;
+	}
+	#c2
+	{
+		animation: none;opacity: 1;
+	}
+	#z3
+	{
+		animation: none;opacity: 1;
+	}
+	#e4
+	{
+		animation: none;opacity: 1;
+	}
+	#k2
+	{
+		animation: none;opacity: 1;
+	}
+
+
+	#img1
+	{
+		animation: menu-occur 3s ease-in-out;;	opacity: 1;
+	}
+	#desc1
+	{
+		animation: menu-occur 3s ease-in-out;;	opacity: 1;
+	}
+
+
+}
+
+
+@keyframes letter-loading
+{
+	0%{transform: translateY(80%);opacity: 0;)}
+	50%{opacity: 1;}
+	100%{transform: translateY(0);opacity: 1;}
+}
+
+@keyframes letter-loading2
+{
+	0%{transform: translateY(-60%);opacity: 0;)}
+	100%{transform: translateY(0);opacity: 1;}
+}
+
+
+@keyframes div-inleft
+{
+	0%{transform: translateX(-100%);opacity:0}
+	50%{opacity: 1;}
+	100%{transform: translateX(0);opacity:1}
+}
+
+@keyframes div-inright
+{
+	0%{transform: translateX(100%);opacity:0}
+	50%{opacity: 1;}
+	100%{transform: translateX(0);opacity:1}
+}
+
+
+@keyframes menu-occur
+{
+	0%{opacity:0}
+	50%{opacity: 1;}
+	100%{opacity:1}
+}
+
+
+@keyframes collapse-menu
+{
+	0%{height: 0px;}
+	100%{height: 420px;}   /*to proper height of menu collapsible*/
+}
+
+
+@keyframes list-fadein
+{
+	0%{opacity:0;}
+	100%{opacity: 1;}
+}
+
+
+@keyframes list-fade-out
+{
+	0%{opacity:1;}
+	100%{opacity: 0;}
+}
+
+@keyframes hide-menu
+{
+	0%{height: 420px;}
+	100%{height: 0px;display:none;}   /*to proper height of menu collapsible*/
+}
+
+
+
+
+/* introducing scroll animations with vanilla js */
+
+
+.js-scroll {
+	opacity: 0;
+	transition: opacity 100ms;
+  }
+.js-scroll.scrolled {
+	opacity: 1;
+	background-color: none;
+  }
+
+.scrolled.slide-left {  /* we change the values of this class only when page is scrolled, noramlly it is empyt, that's how our page giv scroll animations */
+  animation: slide-in-left 1s ease-in-out both;
+}
+
+.scrolled.slide-right {
+	animation: slide-in-right 1s ease-in-out both;
+  }
+
+.scrolled.slide-up
+{
+	animation: slide-up 2s ease-in-out both;
+}
+
+
+@keyframes slide-in-left {
+	0% {
+	  transform: translateX(-100px);
+	  opacity: 0;
+	}
+	100% {
+	  transform: translateX(0);
+	  opacity: 1;
+	}
+  }
+
+
+   
+@keyframes slide-in-right {
+	0% {
+	  transform: translateX(100px);
+	  opacity: 0;
+	}
+	100% {
+	  transform: translateX(0);
+	  opacity: 1;
+	}
+  }
+
+  @keyframes slide-up
+  {
+	  0%{transform:translateY(200px);opacity: 0;}
+	  100%{transform: translateY(0);opacity: 1;}
+  }
