@@ -34,4 +34,61 @@ main
     width: 100%;
     height: 100%;
     border-radius: 25px;
+    object-fit: contain;
 }
+
+
+
+
+@media only screen and (max-width: 1031px) {
+    
+        main
+    {
+        flex-direction: column;
+    }
+
+
+
+    .catDesc
+    {
+        width: 80%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .catImg
+    {
+        width: 60%;
+        height: 40%;
+    }
+        
+    
+    .catDesc
+    {
+      font-size: 1.1rem;
+        
+    }
+
+
+
+
+
+  }
+
+
+  @media only screen and (max-width: 658px) {
+    .catDesc
+    {
+      font-size: 0.8rem;
+        
+    }
+
+    .catImg
+    {
+        width: 80%;
+        
+    }
+
+  }

@@ -32,6 +32,7 @@ header
     font-weight: bold;
     box-shadow: 10px 5px 5px black,20px 10px 10px black;
     transition: all 0.25s ease-in-out;
+    text-align: center;
     
 }
 
@@ -49,7 +50,33 @@ header
 
 .menuElement:hover
 {
-    background-color: #e4ae49;
+    background-color: #f5bf5a;
     cursor: pointer;
     transform: translateY(-5px);
 }
+
+
+@media only screen and (max-width: 1031px) {
+    .menuElement
+    {
+      font-size: 0.8rem;
+        
+    }
+
+
+  }
+
+
+  @media only screen and (max-width: 658px) {
+    .menuElement
+    {
+      font-size: 0.5rem;
+        
+    }
+
+  }
+
+
+
+  
+
