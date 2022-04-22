@@ -17,7 +17,7 @@ const Routing = () => {
 
               <Route index element = {<MainContent/>} />
               <Route path="/search-for-kitten" element = {<SearchForKitten/>} />
-              <Route path="/display-random-kitten" element = {<DisplayRandomKitten/>} />
+              <Route path="/display-random-fact" element = {<DisplayRandomKitten/>} />
 
           </Routes>
 

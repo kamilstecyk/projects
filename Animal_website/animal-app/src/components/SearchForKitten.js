@@ -64,7 +64,7 @@ const SearchForKitten = () => {
 
       <label>
         What kind of breed of the kitten are you the most interested?
-        <select value={value} maxMenuHeight="200" onChange={handleChange}>  
+        <select value={value}  onChange={handleChange}>  
 
           {breeds.map((breed,index)=>{return (<option key={index} value={breed.name}>{breed.name}</option>);})}
 
@@ -76,7 +76,7 @@ const SearchForKitten = () => {
       
 
       {breeds.length > 0 &&
-        <Breed  name={breeds[selected].name}  origin ={breeds[selected].origin} temperament={breeds[selected].temperament} wikiUrl = {breeds[selected].wikipedia_url}  imgUrl = {breeds[selected].image.url} />
+        <Breed  name={breeds[selected].name}  origin ={breeds[selected].origin} temperament={breeds[selected].temperament} wikiUrl = {breeds[selected].wikipedia_url} lifeSpan = {breeds[selected].life_span}   imgUrl = {breeds[selected].image.url}  desc = {breeds[selected].description} />
       }
 
       

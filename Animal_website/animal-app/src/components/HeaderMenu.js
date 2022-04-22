@@ -24,7 +24,7 @@ const HeaderMenu = () => {
             </div>
 
             <div className='menuElement' > 
-            <Link className = "Link" to={`/display-random-kitten`}>  Display random kitten </Link>
+            <Link className = "Link" to={`/display-random-fact`}>  Display random fact </Link>
             </div>
     </header>
   )
