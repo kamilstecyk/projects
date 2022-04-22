@@ -1,6 +1,0 @@
-0;kamilek
-1;kamilek
-0;a
-2;kamliek
-6;kamil
-8;kamil
