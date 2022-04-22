@@ -1,0 +1,4 @@
+1;becadlo;2663500
+2;Robert;101000
+3;kamil;20190
+4;Janosik;2000
