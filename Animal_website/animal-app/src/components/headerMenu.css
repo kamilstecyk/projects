@@ -1,0 +1,82 @@
+
+:root
+{
+    --numberOfElements: calc(70%/3);  /* if the number of menu elements change then we have to change 3 */
+}
+
+header
+{
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4da0b0;
+    border-bottom: 1px solid black;
+    box-shadow: 2px 2px 20px black;
+
+
+}
+
+.menuElement
+{
+    width: var(--numberOfElements);
+    height: 60%;
+    background-color: #d39d38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    box-shadow: 10px 5px 5px black,20px 10px 10px black;
+    transition: all 0.25s ease-in-out;
+    text-align: center;
+    
+}
+
+.menuElement a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color:black;
+
+}
+
+.menuElement:hover
+{
+    background-color: #f5bf5a;
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+
+@media only screen and (max-width: 1031px) {
+    .menuElement
+    {
+      font-size: 0.8rem;
+        
+    }
+
+
+  }
+
+
+  @media only screen and (max-width: 658px) {
+    .menuElement
+    {
+      font-size: 0.5rem;
+        
+    }
+
+  }
+
+
+
+  
+
