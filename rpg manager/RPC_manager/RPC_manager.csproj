@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3D502131-A303-48E2-B3D0-C22AD8584A84}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RPC_manager</RootNamespace>
+    <AssemblyName>RPC_manager</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForm.Designer.cs">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dbActions.cs" />
+    <Compile Include="DbActionsAddForm.cs" />
+    <Compile Include="dbActionsDisplayForm.cs" />
+    <Compile Include="dbActionsEditForm.cs" />
+    <Compile Include="dbActionsEditPasswordsForm.cs" />
+    <Compile Include="dbActionsMainForm.cs" />
+    <Compile Include="dbActionsRemoveForm.cs" />
+    <Compile Include="dbModel.cs" />
+    <Compile Include="DisplayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayForm.Designer.cs">
+      <DependentUpon>DisplayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditPasswordsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPasswordsForm.Designer.cs">
+      <DependentUpon>EditPasswordsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205161702352_InitialCreate.cs" />
+    <Compile Include="Migrations\202205161702352_InitialCreate.Designer.cs">
+      <DependentUpon>202205161702352_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205172356449_DataCreating.cs" />
+    <Compile Include="Migrations\202205172356449_DataCreating.Designer.cs">
+      <DependentUpon>202205172356449_DataCreating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205180013086_DataUpdate.cs" />
+    <Compile Include="Migrations\202205180013086_DataUpdate.Designer.cs">
+      <DependentUpon>202205180013086_DataUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205180015490_DataUpdate2.cs" />
+    <Compile Include="Migrations\202205180015490_DataUpdate2.Designer.cs">
+      <DependentUpon>202205180015490_DataUpdate2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205180042357_DataUpdate3.cs" />
+    <Compile Include="Migrations\202205180042357_DataUpdate3.Designer.cs">
+      <DependentUpon>202205180042357_DataUpdate3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205180938294_updateDb4.cs" />
+    <Compile Include="Migrations\202205180938294_updateDb4.Designer.cs">
+      <DependentUpon>202205180938294_updateDb4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205181601324_updateDB5.cs" />
+    <Compile Include="Migrations\202205181601324_updateDB5.Designer.cs">
+      <DependentUpon>202205181601324_updateDB5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205190053543_updateDB6.cs" />
+    <Compile Include="Migrations\202205190053543_updateDB6.Designer.cs">
+      <DependentUpon>202205190053543_updateDB6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205190156537_added-constructors.cs" />
+    <Compile Include="Migrations\202205190156537_added-constructors.Designer.cs">
+      <DependentUpon>202205190156537_added-constructors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205191159429_uniqueCategories.cs" />
+    <Compile Include="Migrations\202205191159429_uniqueCategories.Designer.cs">
+      <DependentUpon>202205191159429_uniqueCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205191250446_updateCoppice.cs" />
+    <Compile Include="Migrations\202205191250446_updateCoppice.Designer.cs">
+      <DependentUpon>202205191250446_updateCoppice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205191656349_another.cs" />
+    <Compile Include="Migrations\202205191656349_another.Designer.cs">
+      <DependentUpon>202205191656349_another.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205200044064_update1.cs" />
+    <Compile Include="Migrations\202205200044064_update1.Designer.cs">
+      <DependentUpon>202205200044064_update1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205200124578_updatecategoryid.cs" />
+    <Compile Include="Migrations\202205200124578_updatecategoryid.Designer.cs">
+      <DependentUpon>202205200124578_updatecategoryid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205201221216_datetimeUpdate.cs" />
+    <Compile Include="Migrations\202205201221216_datetimeUpdate.Designer.cs">
+      <DependentUpon>202205201221216_datetimeUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205201226512_up.cs" />
+    <Compile Include="Migrations\202205201226512_up.Designer.cs">
+      <DependentUpon>202205201226512_up.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205230130583_removal.cs" />
+    <Compile Include="Migrations\202205230130583_removal.Designer.cs">
+      <DependentUpon>202205230130583_removal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205232253045_addRole.cs" />
+    <Compile Include="Migrations\202205232253045_addRole.Designer.cs">
+      <DependentUpon>202205232253045_addRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205232254339_addRole1.cs" />
+    <Compile Include="Migrations\202205232254339_addRole1.Designer.cs">
+      <DependentUpon>202205232254339_addRole1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205232254554_addRole2.cs" />
+    <Compile Include="Migrations\202205232254554_addRole2.Designer.cs">
+      <DependentUpon>202205232254554_addRole2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205240047208_uniqueElements.cs" />
+    <Compile Include="Migrations\202205240047208_uniqueElements.Designer.cs">
+      <DependentUpon>202205240047208_uniqueElements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205240114355_uniqEl.cs" />
+    <Compile Include="Migrations\202205240114355_uniqEl.Designer.cs">
+      <DependentUpon>202205240114355_uniqEl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationLogic.cs" />
+    <Compile Include="RemoveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveForm.Designer.cs">
+      <DependentUpon>RemoveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Verification.cs" />
+    <EmbeddedResource Include="AddForm.resx">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayForm.resx">
+      <DependentUpon>DisplayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPasswordsForm.resx">
+      <DependentUpon>EditPasswordsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205161702352_InitialCreate.resx">
+      <DependentUpon>202205161702352_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205172356449_DataCreating.resx">
+      <DependentUpon>202205172356449_DataCreating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205180013086_DataUpdate.resx">
+      <DependentUpon>202205180013086_DataUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205180015490_DataUpdate2.resx">
+      <DependentUpon>202205180015490_DataUpdate2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205180042357_DataUpdate3.resx">
+      <DependentUpon>202205180042357_DataUpdate3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205180938294_updateDb4.resx">
+      <DependentUpon>202205180938294_updateDb4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205181601324_updateDB5.resx">
+      <DependentUpon>202205181601324_updateDB5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205190053543_updateDB6.resx">
+      <DependentUpon>202205190053543_updateDB6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205190156537_added-constructors.resx">
+      <DependentUpon>202205190156537_added-constructors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205191159429_uniqueCategories.resx">
+      <DependentUpon>202205191159429_uniqueCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205191250446_updateCoppice.resx">
+      <DependentUpon>202205191250446_updateCoppice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205191656349_another.resx">
+      <DependentUpon>202205191656349_another.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205200044064_update1.resx">
+      <DependentUpon>202205200044064_update1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205200124578_updatecategoryid.resx">
+      <DependentUpon>202205200124578_updatecategoryid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205201221216_datetimeUpdate.resx">
+      <DependentUpon>202205201221216_datetimeUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205201226512_up.resx">
+      <DependentUpon>202205201226512_up.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205230130583_removal.resx">
+      <DependentUpon>202205230130583_removal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205232253045_addRole.resx">
+      <DependentUpon>202205232253045_addRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205232254339_addRole1.resx">
+      <DependentUpon>202205232254339_addRole1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205232254554_addRole2.resx">
+      <DependentUpon>202205232254554_addRole2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205240047208_uniqueElements.resx">
+      <DependentUpon>202205240047208_uniqueElements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205240114355_uniqEl.resx">
+      <DependentUpon>202205240114355_uniqEl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveForm.resx">
+      <DependentUpon>RemoveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skynews-nintendo-switch_5542908.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-back-regular-24.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

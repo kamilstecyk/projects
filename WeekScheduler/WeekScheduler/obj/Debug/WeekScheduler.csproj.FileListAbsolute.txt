@@ -1,0 +1,7 @@
+C:\Users\user\source\repos\WeekScheduler\WeekScheduler\bin\Debug\WeekScheduler.dll
+C:\Users\user\source\repos\WeekScheduler\WeekScheduler\bin\Debug\WeekScheduler.pdb
+C:\Users\user\source\repos\WeekScheduler\WeekScheduler\obj\Debug\WeekScheduler.WeekScheduler.resources
+C:\Users\user\source\repos\WeekScheduler\WeekScheduler\obj\Debug\WeekScheduler.csproj.GenerateResource.cache
+C:\Users\user\source\repos\WeekScheduler\WeekScheduler\obj\Debug\WeekScheduler.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\WeekScheduler\WeekScheduler\obj\Debug\WeekScheduler.dll
+C:\Users\user\source\repos\WeekScheduler\WeekScheduler\obj\Debug\WeekScheduler.pdb
