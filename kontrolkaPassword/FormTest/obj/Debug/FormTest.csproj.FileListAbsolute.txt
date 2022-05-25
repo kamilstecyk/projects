@@ -1,0 +1,13 @@
+C:\Users\user\Desktop\kontrolkaPassword\FormTest\bin\Debug\FormTest.exe.config
+C:\Users\user\Desktop\kontrolkaPassword\FormTest\bin\Debug\FormTest.exe
+C:\Users\user\Desktop\kontrolkaPassword\FormTest\bin\Debug\FormTest.pdb
+C:\Users\user\Desktop\kontrolkaPassword\FormTest\obj\Debug\FormTest.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\kontrolkaPassword\FormTest\obj\Debug\FormTest.Properties.Resources.resources
+C:\Users\user\Desktop\kontrolkaPassword\FormTest\obj\Debug\FormTest.csproj.GenerateResource.cache
+C:\Users\user\Desktop\kontrolkaPassword\FormTest\obj\Debug\FormTest.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\kontrolkaPassword\FormTest\obj\Debug\FormTest.exe
+C:\Users\user\Desktop\kontrolkaPassword\FormTest\obj\Debug\FormTest.pdb
+C:\Users\user\Desktop\kontrolkaPassword\FormTest\bin\Debug\PasswordVerificator.dll
+C:\Users\user\Desktop\kontrolkaPassword\FormTest\bin\Debug\PasswordVerificator.pdb
+C:\Users\user\Desktop\kontrolkaPassword\FormTest\obj\Debug\FormTest.Form1.resources
+C:\Users\user\Desktop\kontrolkaPassword\FormTest\obj\Debug\FormTest.csproj.CopyComplete
