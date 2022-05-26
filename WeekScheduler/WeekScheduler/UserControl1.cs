@@ -14,15 +14,56 @@ namespace WeekScheduler
     {
 
         static TableLayoutPanel schedulerTable = null;
+        private int rowsCount = 48;
+        private int colsCount = 7;
+        Color defualtColor = Color.Green;
+        Color markedCellColor = Color.Red;
+
+        // categories
+
+        private Color defaultColorOfTask = Color.Wheat;
+
+        List<string> categoriesOfTasks = new List<string>() { "Household chore", "Job", "Hobby", "Very important" };
+        List<Color> colorsOfTasks = new List<Color>() { Color.BurlyWood, Color.Brown, Color.Yellow, Color.Tomato };
+
+        Label[,] tableOfPanels = null;
+        bool[,] tableOfClicked = null;  // contain true on the indices of panels that were clicked
+
+        Label lastClicked = null;
+       // List<Panel> clickedPanels = new List<Panel>();
+
+        Dictionary<IndicesOfPanel,Label> clickedPanels = new Dictionary<IndicesOfPanel,Label >();   // arbitrary for handling clicked panels in the table
+
+        bool wasAddedTask = false;
+
+        private class IndicesOfPanel
+        {
+            public int rowIndex;
+            public int colIndex;
+
+            public IndicesOfPanel(int rI,int cI)
+            {
+                rowIndex = rI;
+                colIndex = cI;
+            }
+        }
+
+
 
         public WeekScheduler()
         {
             InitializeComponent();
 
 
-            schedulerTable = createSchedulerTable(1000,540,7,48);
+            schedulerTable = createSchedulerTable(1000,530,7,48);
 
-           // schedulerTable = dynamicTableLayoutPanel;  // we hook reference to it 
+            // we fill combobox
+
+            foreach(var category in categoriesOfTasks)
+            {
+                comboBox1.Items.Add(category);
+            }
+
         }
 
 
@@ -49,7 +90,7 @@ namespace WeekScheduler
             dynamicTableLayoutPanel.TabIndex = 0;
             dynamicTableLayoutPanel.CellBorderStyle = TableLayoutPanelCellBorderStyle.OutsetDouble;
             dynamicTableLayoutPanel.Dock = DockStyle.Fill;
-            dynamicTableLayoutPanel.BackColor = Color.Green;
+            dynamicTableLayoutPanel.BackColor = defualtColor;
             dynamicTableLayoutPanel.AutoScroll = true;
             dynamicTableLayoutPanel.MaximumSize = new System.Drawing.Size(width, height);
 
@@ -58,7 +99,7 @@ namespace WeekScheduler
             dynamicTableLayoutPanel.RowCount = rowCount;
 
 
-            float sizeOfColCell = width / columnCount;
+            float sizeOfColCell = width / columnCount - 6;
             float sizeOfRowCell = height / (rowCount / 2);
 
 
@@ -127,6 +168,40 @@ namespace WeekScheduler
 
             this.Controls.Add(dynamicTableLayoutPanel);
 
+
+            // we add panels to table and assign events handlers
+
+            tableOfPanels = new Label[rowCount - 1,columnCount -1];
+
+
+            // we create table of clicked/ not clicked panels
+
+            tableOfClicked = new bool[rowCount - 1, columnCount - 1];
+
+
+            for (int i=1;i<8;++i)
+            {
+                for(int j=1;j<49;j++)
+                {
+                    // panel on the particular cell in table
+
+                    Label panelToAdd = new Label() { Size = new Size((int)sizeOfColCell, (int)sizeOfRowCell),Name = (j-1) + ":" + (i-1),Cursor = Cursors.Hand };
+                    panelToAdd.Click += new EventHandler(panelClickHandler);
+                    panelToAdd.TextAlign = ContentAlignment.MiddleCenter;
+                    panelToAdd.FlatStyle = FlatStyle.Popup;
+
+                    tableOfPanels[j-1,i - 1] = panelToAdd;
+
+                    // tableOfClicked[j - 1, i - 1] = false;   // we default set not clicked panels when app starts
+                    cleanAllCellsInTableOfBools();
+
+                    dynamicTableLayoutPanel.Controls.Add(panelToAdd, i, j);
+                   
+                }
+            }
+
+        
+
             return dynamicTableLayoutPanel;
             
         }
@@ -144,6 +219,272 @@ namespace WeekScheduler
 
             return hour + ":" + minutes;
         }
+
+
+
+        private string getTimeOfStartTask(int rowIndex, int cols)
+        {
+
+            string resultTime = null;  // hour of start and after ';' days from today
+
+            int hour = 0;
+            int minute = 0;
+
+            for (int i = 0; i < 48; ++i)
+            {
+
+                if (i % 2 == 0)
+                {
+
+                    resultTime = buildTime(hour, minute) + ";" + cols;
+                    minute += 30;
+                }
+
+                if (i % 2 != 0)
+                {
+                    resultTime = buildTime(hour, minute) + ";" + cols;
+                    minute = 0;
+                    ++hour;
+                }
+
+
+                if (i == rowIndex)
+                {
+                    break;
+                }
+
+            }
+
+            return resultTime;
+
+        }
+
+
+        private void cleanAllCellsInTableOfBools()
+        {
+            for (int i = 0; i < rowsCount; ++i)
+            {
+                for (int j = 0; j < colsCount; ++j)
+                {
+
+                    if (tableOfClicked[i, j] == true)
+                    {
+                        tableOfPanels[i, j].BackColor = defualtColor; // we restore default setttings
+                    }
+
+                    tableOfClicked[i, j] = false;
+                }
+            }
+        }
+
+
+        private void clean2DtableOfBools()  // clean only clicked
+        {
+            
+            foreach(var entry in clickedPanels)
+            {
+                entry.Value.BackColor = defualtColor;
+                tableOfClicked[entry.Key.rowIndex, entry.Key.colIndex] = false;
+            }
+
+        }
+
+
+        void panelClickHandler(object sender, EventArgs e)
+        {
+
+            Label triggeredPanel = (Label)sender;
+
+
+            string[] rowAndColumnOfPanel = triggeredPanel.Name.ToString().Split(':');
+
+            int rowIndex = int.Parse(rowAndColumnOfPanel[0]);
+            int colIndex = int.Parse(rowAndColumnOfPanel[1]);
+
+            Console.WriteLine("Clicked: " + rowIndex + " ; " + colIndex);
+
+            if (lastClicked != null)  // we should merge in one day up or down particular cell
+            {
+                Console.WriteLine(rowIndex - 1 + " ; " + colIndex);
+
+
+                if (rowIndex == (rowsCount - 1))  // last cell
+                {
+
+
+                    if (lastClicked != tableOfPanels[rowIndex - 1, colIndex])
+                    {
+                        clean2DtableOfBools();
+                        showMessageBox("Invalid operation!");
+                        lastClicked = null;
+                        clickedPanels.Clear();
+                        return;
+                    }
+                   
+                        
+                    lastClicked = triggeredPanel;
+                    clickedPanels.Add( new IndicesOfPanel(rowIndex,colIndex), lastClicked);
+                    
+                }
+
+
+
+                else if (rowIndex == 0)  // first cell
+                {
+
+                    if (lastClicked != tableOfPanels[rowIndex + 1, colIndex])
+                    {
+                        clean2DtableOfBools();
+                        showMessageBox("Invalid operation!");
+                        lastClicked = null;
+                        clickedPanels.Clear();
+                        return;
+                    }
+
+                    lastClicked = triggeredPanel;
+                    clickedPanels.Add(new IndicesOfPanel(rowIndex, colIndex),lastClicked);
+
+
+                }
+
+                else if ((lastClicked != tableOfPanels[rowIndex - 1, colIndex] && lastClicked != tableOfPanels[rowIndex + 1, colIndex]) || (tableOfClicked[rowIndex - 1, colIndex] == true && tableOfClicked[rowIndex + 1, colIndex] == true))
+                {
+                    clean2DtableOfBools();
+                    showMessageBox("Invalid operation!");
+                    lastClicked = null;
+                    clickedPanels.Clear();
+                    return;
+                }
+
+
+
+
+
+                lastClicked = triggeredPanel;
+                clickedPanels.Add(new IndicesOfPanel(rowIndex, colIndex), lastClicked);
+
+            }
+
+
+
+            tableOfClicked[rowIndex, colIndex] = true;
+            triggeredPanel.BackColor = markedCellColor;
+            lastClicked = triggeredPanel;
+            clickedPanels.Add(new IndicesOfPanel(rowIndex, colIndex), lastClicked);
+
+
+        }
+
+        private static void showMessageBox(string message)
+        {
+            string caption = "Error";
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+            DialogResult result;
+
+            // Displays the MessageBox.
+            result = MessageBox.Show(message, caption, buttons);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(clickedPanels.Count > 0 )
+            {
+                displayAddTaskPanel();
+            }
+            else
+            {
+                showMessageBox("You must choose cell times to add task!");
+            }
+        }
+
+        private void displayAddTaskPanel()
+        {
+            addTaskPanel.Visible = true;
+            addTaskPanel.Enabled = true;
+            schedulerTable.Enabled = false;
+            button1.Enabled = false;
+
+
+            // we reset combobox
+            comboBox1.SelectedIndex = -1;
+
+            // we reset textbox
+            textBox1.Text = "";
+
+        }
+
+        private void hideAddTaskPanel()
+        {
+            addTaskPanel.Visible = false;
+            addTaskPanel.Enabled = false;
+            schedulerTable.Enabled = true;
+            button1.Enabled = true;
+
+            // we clear clicked earlier panels
+
+            if (!wasAddedTask)
+            {
+                clean2DtableOfBools();
+            }
+          
+
+            lastClicked = null;
+            clickedPanels.Clear();
+            wasAddedTask = false;
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            hideAddTaskPanel();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex >= 0)
+            {
+                SelectedTaskColor.BackColor = colorsOfTasks[comboBox1.SelectedIndex];
+            }
+            else
+            {
+                SelectedTaskColor.BackColor = Color.Transparent;
+            }
+        }
+
+        private void addBtn_Click(object sender, EventArgs e)
+        {
+            
+            // we set choosed color for choosed panels and give them task description
+
+
+            if(comboBox1.SelectedIndex != -1 && textBox1.Text.Length != 0)
+            {
+                wasAddedTask = true;
+
+                foreach(var choosedPanel in clickedPanels.Values)
+                {
+                    choosedPanel.BackColor = SelectedTaskColor.BackColor;
+                    choosedPanel.Enabled = false;
+                    choosedPanel.Text = textBox1.Text;
+
+                    int indexRowStartTask = clickedPanels.ElementAt(0).Key.rowIndex;
+                    int indexColStartTask = clickedPanels.ElementAt(0).Key.colIndex;
+
+                    Console.WriteLine(getTimeOfStartTask(indexRowStartTask, indexColStartTask) + " ; start task time");
+                }
+
+
+                hideAddTaskPanel();
+
+            }
+            else
+            {
+                showMessageBox("You must change category of task and add description of it!");
+            }
+
+        }
+
+
+       
 
     }
 }
