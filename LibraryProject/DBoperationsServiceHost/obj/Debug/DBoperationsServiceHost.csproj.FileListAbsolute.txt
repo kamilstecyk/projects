@@ -1,0 +1,13 @@
+C:\Users\user\source\repos\LibraryProject\DBoperationsServiceHost\bin\Debug\DBoperationsServiceHost.exe.config
+C:\Users\user\source\repos\LibraryProject\DBoperationsServiceHost\bin\Debug\DBoperationsServiceHost.exe
+C:\Users\user\source\repos\LibraryProject\DBoperationsServiceHost\bin\Debug\DBoperationsServiceHost.pdb
+C:\Users\user\source\repos\LibraryProject\DBoperationsServiceHost\bin\Debug\DBoperationsService.dll
+C:\Users\user\source\repos\LibraryProject\DBoperationsServiceHost\bin\Debug\DBoperationsService.pdb
+C:\Users\user\source\repos\LibraryProject\DBoperationsServiceHost\bin\Debug\DBoperationsService.dll.config
+C:\Users\user\source\repos\LibraryProject\DBoperationsServiceHost\obj\Debug\DBoperationsServiceHost.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\LibraryProject\DBoperationsServiceHost\obj\Debug\DBoperationsServiceHost.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\LibraryProject\DBoperationsServiceHost\obj\Debug\DBoperationsServiceHost.csproj.CopyComplete
+C:\Users\user\source\repos\LibraryProject\DBoperationsServiceHost\obj\Debug\DBoperationsServiceHost.exe
+C:\Users\user\source\repos\LibraryProject\DBoperationsServiceHost\obj\Debug\DBoperationsServiceHost.pdb
+C:\Users\user\source\repos\LibraryProject\DBoperationsServiceHost\bin\Debug\EntityFramework.dll
+C:\Users\user\source\repos\LibraryProject\DBoperationsServiceHost\bin\Debug\EntityFramework.xml

@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\LibraryProject\LibraryProject\bin\Debug\LibraryProject.exe.config
+C:\Users\user\source\repos\LibraryProject\LibraryProject\bin\Debug\LibraryProject.exe
+C:\Users\user\source\repos\LibraryProject\LibraryProject\bin\Debug\LibraryProject.pdb
+C:\Users\user\source\repos\LibraryProject\LibraryProject\obj\Debug\LibraryProject.Form1.resources
+C:\Users\user\source\repos\LibraryProject\LibraryProject\obj\Debug\LibraryProject.Properties.Resources.resources
+C:\Users\user\source\repos\LibraryProject\LibraryProject\obj\Debug\LibraryProject.csproj.GenerateResource.cache
+C:\Users\user\source\repos\LibraryProject\LibraryProject\obj\Debug\LibraryProject.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\LibraryProject\LibraryProject\obj\Debug\LibraryProject.exe
+C:\Users\user\source\repos\LibraryProject\LibraryProject\obj\Debug\LibraryProject.pdb
+C:\Users\user\source\repos\LibraryProject\LibraryProject\obj\Debug\LibraryProject.ChangePasswordForm.resources
+C:\Users\user\source\repos\LibraryProject\LibraryProject\obj\Debug\LibraryProject.MainForm.resources
+C:\Users\user\source\repos\LibraryProject\LibraryProject\obj\Debug\LibraryProject.RegistrationForm.resources
+C:\Users\user\source\repos\LibraryProject\LibraryProject\obj\Debug\LibraryProject.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\LibraryProject\LibraryProject\obj\Debug\LibraryProject.AdminForm.resources
+C:\Users\user\source\repos\LibraryProject\LibraryProject\obj\Debug\LibraryProject.GuestForm.resources
