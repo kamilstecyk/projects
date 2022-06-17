@@ -35,33 +35,36 @@ namespace LibraryProject
             this.LeaseBookButton = new System.Windows.Forms.Button();
             this.listBoxBooksToLease = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dateTimePickerToProlong = new System.Windows.Forms.DateTimePicker();
+            this.prolongLeaseButton = new System.Windows.Forms.Button();
+            this.returnBookButton = new System.Windows.Forms.Button();
             this.listBoxBooksToReturn = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.listViewCurrentlyLeasedBooks = new System.Windows.Forms.ListView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.listViewHistoryOfLeasedBooks = new System.Windows.Forms.ListView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.linkLabelReset = new System.Windows.Forms.LinkLabel();
+            this.filteredButton = new System.Windows.Forms.Button();
+            this.listViewFilteredBooks = new System.Windows.Forms.ListView();
             this.label7 = new System.Windows.Forms.Label();
             this.radioButtonPLNCurrency = new System.Windows.Forms.RadioButton();
             this.radioButtonOriginalCurrency = new System.Windows.Forms.RadioButton();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxFilterType = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.comboBoxCurrencyFilter = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.numericUpDowToPrice = new System.Windows.Forms.NumericUpDown();
+            this.textBoxToPrice = new System.Windows.Forms.TextBox();
+            this.textBoxFromPrice = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDownFromPrice = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBoxAuthorFilter = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePickerToProlong = new System.Windows.Forms.DateTimePicker();
-            this.prolongLeaseButton = new System.Windows.Forms.Button();
-            this.returnBookButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -71,8 +74,6 @@ namespace LibraryProject
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDowToPrice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFromPrice)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -152,6 +153,52 @@ namespace LibraryProject
             this.tabPage2.Text = "Return book";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(870, 226);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(199, 25);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Choose data for ending lease of book";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dateTimePickerToProlong
+            // 
+            this.dateTimePickerToProlong.Location = new System.Drawing.Point(869, 264);
+            this.dateTimePickerToProlong.Name = "dateTimePickerToProlong";
+            this.dateTimePickerToProlong.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerToProlong.TabIndex = 19;
+            // 
+            // prolongLeaseButton
+            // 
+            this.prolongLeaseButton.BackColor = System.Drawing.Color.DarkOrange;
+            this.prolongLeaseButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.prolongLeaseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.prolongLeaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.prolongLeaseButton.ForeColor = System.Drawing.Color.White;
+            this.prolongLeaseButton.Location = new System.Drawing.Point(869, 306);
+            this.prolongLeaseButton.Name = "prolongLeaseButton";
+            this.prolongLeaseButton.Size = new System.Drawing.Size(200, 31);
+            this.prolongLeaseButton.TabIndex = 18;
+            this.prolongLeaseButton.Text = "PROLONG LEASE";
+            this.prolongLeaseButton.UseVisualStyleBackColor = false;
+            this.prolongLeaseButton.Click += new System.EventHandler(this.prolongLeaseButton_Click);
+            // 
+            // returnBookButton
+            // 
+            this.returnBookButton.BackColor = System.Drawing.Color.DarkOrange;
+            this.returnBookButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.returnBookButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.returnBookButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.returnBookButton.ForeColor = System.Drawing.Color.White;
+            this.returnBookButton.Location = new System.Drawing.Point(869, 77);
+            this.returnBookButton.Name = "returnBookButton";
+            this.returnBookButton.Size = new System.Drawing.Size(200, 31);
+            this.returnBookButton.TabIndex = 17;
+            this.returnBookButton.Text = "RETURN BOOK";
+            this.returnBookButton.UseVisualStyleBackColor = false;
+            this.returnBookButton.Click += new System.EventHandler(this.returnBookButton_Click_1);
+            // 
             // listBoxBooksToReturn
             // 
             this.listBoxBooksToReturn.BackColor = System.Drawing.Color.DarkOrange;
@@ -211,6 +258,9 @@ namespace LibraryProject
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.linkLabelReset);
+            this.tabPage5.Controls.Add(this.filteredButton);
+            this.tabPage5.Controls.Add(this.listViewFilteredBooks);
             this.tabPage5.Controls.Add(this.label7);
             this.tabPage5.Controls.Add(this.radioButtonPLNCurrency);
             this.tabPage5.Controls.Add(this.radioButtonOriginalCurrency);
@@ -224,6 +274,45 @@ namespace LibraryProject
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "All books";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // linkLabelReset
+            // 
+            this.linkLabelReset.AutoSize = true;
+            this.linkLabelReset.Location = new System.Drawing.Point(254, 296);
+            this.linkLabelReset.Name = "linkLabelReset";
+            this.linkLabelReset.Size = new System.Drawing.Size(62, 13);
+            this.linkLabelReset.TabIndex = 19;
+            this.linkLabelReset.TabStop = true;
+            this.linkLabelReset.Text = "Reset fields";
+            this.linkLabelReset.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelReset_LinkClicked);
+            // 
+            // filteredButton
+            // 
+            this.filteredButton.BackColor = System.Drawing.Color.DarkOrange;
+            this.filteredButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.filteredButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.filteredButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.filteredButton.ForeColor = System.Drawing.Color.White;
+            this.filteredButton.Location = new System.Drawing.Point(72, 383);
+            this.filteredButton.Name = "filteredButton";
+            this.filteredButton.Size = new System.Drawing.Size(200, 31);
+            this.filteredButton.TabIndex = 18;
+            this.filteredButton.Text = "LOOK FOR BOOKS";
+            this.filteredButton.UseVisualStyleBackColor = false;
+            this.filteredButton.Click += new System.EventHandler(this.filteredButton_Click);
+            // 
+            // listViewFilteredBooks
+            // 
+            this.listViewFilteredBooks.BackColor = System.Drawing.Color.DarkOrange;
+            this.listViewFilteredBooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.listViewFilteredBooks.ForeColor = System.Drawing.Color.White;
+            this.listViewFilteredBooks.HideSelection = false;
+            this.listViewFilteredBooks.Location = new System.Drawing.Point(431, 42);
+            this.listViewFilteredBooks.Name = "listViewFilteredBooks";
+            this.listViewFilteredBooks.Size = new System.Drawing.Size(666, 239);
+            this.listViewFilteredBooks.TabIndex = 7;
+            this.listViewFilteredBooks.UseCompatibleStateImageBehavior = false;
+            this.listViewFilteredBooks.View = System.Windows.Forms.View.List;
             // 
             // label7
             // 
@@ -241,13 +330,13 @@ namespace LibraryProject
             this.radioButtonPLNCurrency.Name = "radioButtonPLNCurrency";
             this.radioButtonPLNCurrency.Size = new System.Drawing.Size(46, 17);
             this.radioButtonPLNCurrency.TabIndex = 5;
-            this.radioButtonPLNCurrency.TabStop = true;
             this.radioButtonPLNCurrency.Text = "PLN";
             this.radioButtonPLNCurrency.UseVisualStyleBackColor = true;
             // 
             // radioButtonOriginalCurrency
             // 
             this.radioButtonOriginalCurrency.AutoSize = true;
+            this.radioButtonOriginalCurrency.Checked = true;
             this.radioButtonOriginalCurrency.Location = new System.Drawing.Point(140, 329);
             this.radioButtonOriginalCurrency.Name = "radioButtonOriginalCurrency";
             this.radioButtonOriginalCurrency.Size = new System.Drawing.Size(105, 17);
@@ -259,20 +348,21 @@ namespace LibraryProject
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.DarkOrange;
-            this.panel4.Controls.Add(this.comboBox1);
+            this.panel4.Controls.Add(this.comboBoxFilterType);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Location = new System.Drawing.Point(40, 105);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(276, 42);
             this.panel4.TabIndex = 3;
             // 
-            // comboBox1
+            // comboBoxFilterType
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(137, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(124, 21);
-            this.comboBox1.TabIndex = 1;
+            this.comboBoxFilterType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxFilterType.FormattingEnabled = true;
+            this.comboBoxFilterType.Location = new System.Drawing.Point(137, 12);
+            this.comboBoxFilterType.Name = "comboBoxFilterType";
+            this.comboBoxFilterType.Size = new System.Drawing.Size(124, 21);
+            this.comboBoxFilterType.TabIndex = 1;
             // 
             // label5
             // 
@@ -295,6 +385,7 @@ namespace LibraryProject
             // 
             // comboBoxCurrencyFilter
             // 
+            this.comboBoxCurrencyFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCurrencyFilter.FormattingEnabled = true;
             this.comboBoxCurrencyFilter.Location = new System.Drawing.Point(137, 12);
             this.comboBoxCurrencyFilter.Name = "comboBoxCurrencyFilter";
@@ -313,37 +404,37 @@ namespace LibraryProject
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkOrange;
-            this.panel2.Controls.Add(this.numericUpDowToPrice);
+            this.panel2.Controls.Add(this.textBoxToPrice);
+            this.panel2.Controls.Add(this.textBoxFromPrice);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.numericUpDownFromPrice);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(40, 173);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(276, 42);
             this.panel2.TabIndex = 1;
             // 
-            // numericUpDowToPrice
+            // textBoxToPrice
             // 
-            this.numericUpDowToPrice.Location = new System.Drawing.Point(224, 10);
-            this.numericUpDowToPrice.Name = "numericUpDowToPrice";
-            this.numericUpDowToPrice.Size = new System.Drawing.Size(30, 20);
-            this.numericUpDowToPrice.TabIndex = 3;
+            this.textBoxToPrice.Location = new System.Drawing.Point(208, 12);
+            this.textBoxToPrice.Name = "textBoxToPrice";
+            this.textBoxToPrice.Size = new System.Drawing.Size(53, 20);
+            this.textBoxToPrice.TabIndex = 4;
+            // 
+            // textBoxFromPrice
+            // 
+            this.textBoxFromPrice.Location = new System.Drawing.Point(128, 12);
+            this.textBoxFromPrice.Name = "textBoxFromPrice";
+            this.textBoxFromPrice.Size = new System.Drawing.Size(53, 20);
+            this.textBoxFromPrice.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(200, 12);
+            this.label4.Location = new System.Drawing.Point(187, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(18, 17);
             this.label4.TabIndex = 2;
             this.label4.Text = "to";
-            // 
-            // numericUpDownFromPrice
-            // 
-            this.numericUpDownFromPrice.Location = new System.Drawing.Point(153, 10);
-            this.numericUpDownFromPrice.Name = "numericUpDownFromPrice";
-            this.numericUpDownFromPrice.Size = new System.Drawing.Size(30, 20);
-            this.numericUpDownFromPrice.TabIndex = 1;
             // 
             // label3
             // 
@@ -366,6 +457,7 @@ namespace LibraryProject
             // 
             // comboBoxAuthorFilter
             // 
+            this.comboBoxAuthorFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxAuthorFilter.FormattingEnabled = true;
             this.comboBoxAuthorFilter.Location = new System.Drawing.Point(137, 12);
             this.comboBoxAuthorFilter.Name = "comboBoxAuthorFilter";
@@ -381,52 +473,6 @@ namespace LibraryProject
             this.label2.TabIndex = 0;
             this.label2.Text = "Author:";
             // 
-            // label8
-            // 
-            this.label8.Location = new System.Drawing.Point(870, 226);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(199, 25);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Choose data for ending lease of book";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dateTimePickerToProlong
-            // 
-            this.dateTimePickerToProlong.Location = new System.Drawing.Point(869, 264);
-            this.dateTimePickerToProlong.Name = "dateTimePickerToProlong";
-            this.dateTimePickerToProlong.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePickerToProlong.TabIndex = 19;
-            // 
-            // prolongLeaseButton
-            // 
-            this.prolongLeaseButton.BackColor = System.Drawing.Color.DarkOrange;
-            this.prolongLeaseButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.prolongLeaseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prolongLeaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.prolongLeaseButton.ForeColor = System.Drawing.Color.White;
-            this.prolongLeaseButton.Location = new System.Drawing.Point(869, 306);
-            this.prolongLeaseButton.Name = "prolongLeaseButton";
-            this.prolongLeaseButton.Size = new System.Drawing.Size(200, 31);
-            this.prolongLeaseButton.TabIndex = 18;
-            this.prolongLeaseButton.Text = "PROLONG LEASE";
-            this.prolongLeaseButton.UseVisualStyleBackColor = false;
-            this.prolongLeaseButton.Click += new System.EventHandler(this.prolongLeaseButton_Click);
-            // 
-            // returnBookButton
-            // 
-            this.returnBookButton.BackColor = System.Drawing.Color.DarkOrange;
-            this.returnBookButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.returnBookButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.returnBookButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.returnBookButton.ForeColor = System.Drawing.Color.White;
-            this.returnBookButton.Location = new System.Drawing.Point(869, 77);
-            this.returnBookButton.Name = "returnBookButton";
-            this.returnBookButton.Size = new System.Drawing.Size(200, 31);
-            this.returnBookButton.TabIndex = 17;
-            this.returnBookButton.Text = "RETURN BOOK";
-            this.returnBookButton.UseVisualStyleBackColor = false;
-            this.returnBookButton.Click += new System.EventHandler(this.returnBookButton_Click_1);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -436,7 +482,9 @@ namespace LibraryProject
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -448,8 +496,7 @@ namespace LibraryProject
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDowToPrice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFromPrice)).EndInit();
+            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -473,15 +520,13 @@ namespace LibraryProject
         private System.Windows.Forms.RadioButton radioButtonPLNCurrency;
         private System.Windows.Forms.RadioButton radioButtonOriginalCurrency;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxFilterType;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox comboBoxCurrencyFilter;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.NumericUpDown numericUpDowToPrice;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDownFromPrice;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox comboBoxAuthorFilter;
@@ -490,5 +535,10 @@ namespace LibraryProject
         private System.Windows.Forms.DateTimePicker dateTimePickerToProlong;
         private System.Windows.Forms.Button prolongLeaseButton;
         private System.Windows.Forms.Button returnBookButton;
+        private System.Windows.Forms.ListView listViewFilteredBooks;
+        private System.Windows.Forms.Button filteredButton;
+        private System.Windows.Forms.LinkLabel linkLabelReset;
+        private System.Windows.Forms.TextBox textBoxToPrice;
+        private System.Windows.Forms.TextBox textBoxFromPrice;
     }
 }

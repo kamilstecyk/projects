@@ -52,12 +52,12 @@ namespace LibraryProject
 
                 if(loggedUserRole.Equals("Admin"))
                 {
-                    adminForm = new AdminForm();
+                    adminForm = new AdminForm(this);
                     adminForm.Show();
                 }
                 else
                 {
-                    mainForm = new MainForm();
+                    mainForm = new MainForm(this);
                     mainForm.Show();
 
                 }
@@ -97,7 +97,7 @@ namespace LibraryProject
         {
             // we ommit login procedure, we can recognize guest easily because loggedUserID is equal to -1
 
-            guestForm = new GuestForm();
+            guestForm = new GuestForm(this);
             guestForm.Show();
 
             this.Hide();

@@ -12,9 +12,12 @@ namespace LibraryProject
 {
     public partial class AdminForm : Form
     {
-        public AdminForm()
+        static public Form1 prevForm;
+
+        public AdminForm(Form1 givenPrevForm)
         {
             InitializeComponent();
+            prevForm = givenPrevForm;
         }
 
         private void AddBookButton_Click(object sender, EventArgs e)
@@ -27,13 +30,15 @@ namespace LibraryProject
             }
 
 
-            if (!dbActionsBooks.addBook(textBoxTitle.Text, textBoxAuthor.Text, textBoxType.Text, long.Parse(textBoxPrice.Text),textBoxCurrency.Text, int.Parse(textBoxPages.Text)))
+            if (!dbActionsBooks.addBook(textBoxTitle.Text, textBoxAuthor.Text, textBoxType.Text, long.Parse(textBoxPrice.Text),comboBoxCurrency.Text, int.Parse(textBoxPages.Text)))
             {
                 Messages.displayMessageBox("You cannot add this book! Such a book exists");
                 return;
             }
 
             Messages.displayMessageBox("You added book!");
+
+            resetAllAddFields();
 
             AdminForm_Load(sender, e);
 
@@ -42,9 +47,20 @@ namespace LibraryProject
         }
 
 
+        private void resetAllAddFields()
+        {
+            FrontendActions.resetTextBox(textBoxAuthor);
+            FrontendActions.resetTextBox(textBoxTitle);
+            FrontendActions.resetTextBox(textBoxType);
+            FrontendActions.resetTextBox(textBoxPrice);
+            FrontendActions.resetTextBox(textBoxPages);
+            FrontendActions.resetCombobox(comboBoxCurrency);
+
+        }
+
         private bool checkWhetherTextboxesAreEmpty()
         {
-            if( textBoxTitle.Text.Length == 0 || textBoxAuthor.Text.Length == 0 || textBoxType.Text.Length == 0 || textBoxPrice.Text.Length == 0 || textBoxCurrency.Text.Length == 0 || textBoxPages.Text.Length == 0 )
+            if( textBoxTitle.Text.Length == 0 || textBoxAuthor.Text.Length == 0 || textBoxType.Text.Length == 0 || textBoxPrice.Text.Length == 0 || comboBoxCurrency.Text.Length == 0 || textBoxPages.Text.Length == 0 )
             {
                 return true;
             }
@@ -93,6 +109,9 @@ namespace LibraryProject
             FrontendActions.RefreshAndAddToListBoxAllBooks(listBoxBooksToEdit);
             FrontendActions.RefreshAndAddToListViewAllBooks(listViewAllBooks);
             RefreshAndAddToComboBoxUsers();
+
+            string[] availableCurrencies = CurrencyExchangeOperations.getAllAvailableCurrencies();
+            FrontendActions.RefreshAndAddToComboBox(comboBoxCurrency, availableCurrencies);
 
         }
 
@@ -163,6 +182,11 @@ namespace LibraryProject
             var userHistory = dbActionsBooks.getUserHistoryOfBooks(IDOfChoosedUser);
 
             FrontendActions.RefreshAndAddToListView(listViewHistoryOfUser, userHistory);
+        }
+
+        private void AdminForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            prevForm.Close();
         }
     }
 }

@@ -12,7 +12,16 @@ namespace DBFilteringService
     public interface IService1
     {
         [OperationContract]
-        bool isFound();
+        List<string> getAllFilteredBooks(string author, string type, long fromPrice, long toPrice, string currency);
+
+        [OperationContract]
+        List<string> getAllTypesOfBooks();
+
+        [OperationContract]
+        List<string> getAllAuthorOfBooks();
+
+        [OperationContract]
+        List<string> getAllCurrencies();
 
     }
 

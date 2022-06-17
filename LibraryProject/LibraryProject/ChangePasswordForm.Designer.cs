@@ -194,6 +194,7 @@ namespace LibraryProject
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ChangePasswordForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChangePasswordForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChangePasswordForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

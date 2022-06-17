@@ -67,7 +67,9 @@ namespace LibraryProject
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "GuestForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GuestForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GuestForm_FormClosing);
             this.Load += new System.EventHandler(this.GuestForm_Load);
             this.ResumeLayout(false);
 

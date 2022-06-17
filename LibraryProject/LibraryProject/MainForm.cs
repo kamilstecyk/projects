@@ -12,11 +12,16 @@ namespace LibraryProject
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        public static Form1 prevForm;
+
+        public MainForm(Form1 givenPrevForm)
         {
             InitializeComponent();
+            prevForm = givenPrevForm;
         }
 
+
+        
         private void MainForm_Load(object sender, EventArgs e)
         {
             int loggedUserID = dbActions.getLoggedUserID();
@@ -31,6 +36,15 @@ namespace LibraryProject
 
             FrontendActions.RefreshAndAddToListBoxAllAvailableBooksToLease(listBoxBooksToLease);
 
+
+            string[] allAuthors = FilteringBooksActions.getAllAuthorsOfBooks();
+            FrontendActions.RefreshAndAddToComboBox(comboBoxAuthorFilter, allAuthors);
+
+            string[] allTypes = FilteringBooksActions.getAllTypesOfBooks();
+            FrontendActions.RefreshAndAddToComboBox(comboBoxFilterType, allTypes);
+
+            string[] allCurrencies = FilteringBooksActions.getAllCurrenciesOfBooks();
+            FrontendActions.RefreshAndAddToComboBox(comboBoxCurrencyFilter, allCurrencies);
 
         }
 
@@ -121,6 +135,72 @@ namespace LibraryProject
             Messages.displayMessageBox("You have successfully returned the book");
 
             MainForm_Load(sender, e);
+        }
+
+        private void filteredButton_Click(object sender, EventArgs e)
+        {
+            string authorToFilter = comboBoxAuthorFilter.Text;
+            string typeToFilter = comboBoxFilterType.Text;
+            long fromPriceToFilter = -1;
+            long toPriceToFilter = -1;
+            string currencyToFilter = comboBoxCurrencyFilter.Text;
+
+
+            try
+            {
+                fromPriceToFilter = long.Parse(textBoxFromPrice.Text);
+            }
+            catch(Exception ex)
+            {
+                fromPriceToFilter = -1;
+                Console.WriteLine("Empty numericdown field 1 !");
+            }
+
+            try 
+            {
+                toPriceToFilter = long.Parse(textBoxToPrice.Text);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Empty numericDown field 2 !");
+                toPriceToFilter = -1;
+            }
+
+
+
+            string[] filteredBooks = FilteringBooksActions.getFilteredBooksFromDB(authorToFilter, typeToFilter, fromPriceToFilter, toPriceToFilter, currencyToFilter);
+
+            if (radioButtonPLNCurrency.Checked == false)
+            {
+                FrontendActions.RefreshAndAddToListView(listViewFilteredBooks, filteredBooks);
+                return;
+            }
+
+
+            string[] recordWithChangedPriceToPLN = FrontendActions.getRecordsWithPriceInPLN(filteredBooks);
+
+            FrontendActions.RefreshAndAddToListView(listViewFilteredBooks, recordWithChangedPriceToPLN);
+
+        }
+
+        private void linkLabelReset_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            resetFilterFields();
+        }
+
+
+        private void resetFilterFields()
+        {
+            FrontendActions.resetCombobox(comboBoxAuthorFilter);
+            FrontendActions.resetCombobox(comboBoxCurrencyFilter);
+            FrontendActions.resetCombobox(comboBoxFilterType);
+            FrontendActions.resetTextBox(textBoxFromPrice);
+            FrontendActions.resetTextBox(textBoxToPrice);
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            prevForm.Close();
         }
     }
 }

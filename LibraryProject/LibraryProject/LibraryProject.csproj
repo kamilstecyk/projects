@@ -59,13 +59,25 @@
     <Compile Include="ChangePasswordForm.Designer.cs">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\CurrencyExchangeServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\DBFilteringServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\DBoperationsServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="CurrencyExchangeOperations.cs" />
     <Compile Include="dbActions.cs" />
     <Compile Include="dbActionsBooks.cs" />
+    <Compile Include="FilteringBooksActions.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +136,32 @@
     <EmbeddedResource Include="RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\CurrencyExchangeServiceReference\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CurrencyExchangeServiceReference\service.wsdl" />
+    <None Include="Connected Services\CurrencyExchangeServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CurrencyExchangeServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CurrencyExchangeServiceReference\System.ServiceModel.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CurrencyExchangeServiceReference\System.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DBFilteringServiceReference\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DBFilteringServiceReference\service.wsdl" />
+    <None Include="Connected Services\DBFilteringServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DBFilteringServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\DBoperationsServiceReference\Arrays.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -163,6 +201,8 @@
     <None Include="images\removeBook.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\CurrencyExchangeServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\DBFilteringServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\DBoperationsServiceReference\" />
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +213,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\DBoperationsServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DBFilteringServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DBFilteringServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DBFilteringServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CurrencyExchangeServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CurrencyExchangeServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CurrencyExchangeServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

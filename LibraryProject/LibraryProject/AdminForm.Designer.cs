@@ -38,7 +38,6 @@ namespace LibraryProject
             this.textBoxPages = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBoxCurrency = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBoxPrice = new System.Windows.Forms.TextBox();
@@ -82,6 +81,7 @@ namespace LibraryProject
             this.listViewHistoryOfUser = new System.Windows.Forms.ListView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.listViewAllBooks = new System.Windows.Forms.ListView();
+            this.comboBoxCurrency = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -202,19 +202,12 @@ namespace LibraryProject
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.DarkOrange;
-            this.panel5.Controls.Add(this.textBoxCurrency);
+            this.panel5.Controls.Add(this.comboBoxCurrency);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Location = new System.Drawing.Point(81, 276);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(384, 29);
             this.panel5.TabIndex = 5;
-            // 
-            // textBoxCurrency
-            // 
-            this.textBoxCurrency.Location = new System.Drawing.Point(174, 5);
-            this.textBoxCurrency.Name = "textBoxCurrency";
-            this.textBoxCurrency.Size = new System.Drawing.Size(191, 20);
-            this.textBoxCurrency.TabIndex = 1;
             // 
             // label6
             // 
@@ -653,6 +646,15 @@ namespace LibraryProject
             this.listViewAllBooks.UseCompatibleStateImageBehavior = false;
             this.listViewAllBooks.View = System.Windows.Forms.View.List;
             // 
+            // comboBoxCurrency
+            // 
+            this.comboBoxCurrency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCurrency.FormattingEnabled = true;
+            this.comboBoxCurrency.Location = new System.Drawing.Point(180, 5);
+            this.comboBoxCurrency.Name = "comboBoxCurrency";
+            this.comboBoxCurrency.Size = new System.Drawing.Size(185, 21);
+            this.comboBoxCurrency.TabIndex = 1;
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -662,7 +664,9 @@ namespace LibraryProject
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Name = "AdminForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminForm_FormClosing);
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -670,7 +674,6 @@ namespace LibraryProject
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -721,7 +724,6 @@ namespace LibraryProject
         private System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBoxCurrency;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox textBoxPages;
@@ -754,5 +756,6 @@ namespace LibraryProject
         private System.Windows.Forms.ComboBox comboBoxUsers;
         private System.Windows.Forms.ListView listViewHistoryOfUser;
         private System.Windows.Forms.ListView listViewAllBooks;
+        private System.Windows.Forms.ComboBox comboBoxCurrency;
     }
 }
