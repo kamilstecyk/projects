@@ -1,0 +1,7 @@
+C:\Users\user\source\repos\LibraryProject\CurrencyExchangeService\bin\Debug\CurrencyExchangeService.dll.config
+C:\Users\user\source\repos\LibraryProject\CurrencyExchangeService\bin\Debug\CurrencyExchangeService.dll
+C:\Users\user\source\repos\LibraryProject\CurrencyExchangeService\bin\Debug\CurrencyExchangeService.pdb
+C:\Users\user\source\repos\LibraryProject\CurrencyExchangeService\obj\Debug\CurrencyExchangeService.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\LibraryProject\CurrencyExchangeService\obj\Debug\CurrencyExchangeService.dll
+C:\Users\user\source\repos\LibraryProject\CurrencyExchangeService\obj\Debug\CurrencyExchangeService.pdb
+C:\Users\user\source\repos\LibraryProject\CurrencyExchangeService\obj\Debug\CurrencyExchangeService.csproj.AssemblyReference.cache

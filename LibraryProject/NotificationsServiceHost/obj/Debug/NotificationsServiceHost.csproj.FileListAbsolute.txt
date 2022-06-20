@@ -1,0 +1,13 @@
+C:\Users\user\source\repos\LibraryProject\NotificationsServiceHost\bin\Debug\NotificationsServiceHost.exe.config
+C:\Users\user\source\repos\LibraryProject\NotificationsServiceHost\bin\Debug\NotificationsServiceHost.exe
+C:\Users\user\source\repos\LibraryProject\NotificationsServiceHost\bin\Debug\NotificationsServiceHost.pdb
+C:\Users\user\source\repos\LibraryProject\NotificationsServiceHost\bin\Debug\NotificationsService.dll
+C:\Users\user\source\repos\LibraryProject\NotificationsServiceHost\bin\Debug\EntityFramework.dll
+C:\Users\user\source\repos\LibraryProject\NotificationsServiceHost\bin\Debug\NotificationsService.pdb
+C:\Users\user\source\repos\LibraryProject\NotificationsServiceHost\bin\Debug\NotificationsService.dll.config
+C:\Users\user\source\repos\LibraryProject\NotificationsServiceHost\bin\Debug\EntityFramework.xml
+C:\Users\user\source\repos\LibraryProject\NotificationsServiceHost\obj\Debug\NotificationsServiceHost.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\LibraryProject\NotificationsServiceHost\obj\Debug\NotificationsServiceHost.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\LibraryProject\NotificationsServiceHost\obj\Debug\NotificationsServiceHost.csproj.CopyComplete
+C:\Users\user\source\repos\LibraryProject\NotificationsServiceHost\obj\Debug\NotificationsServiceHost.exe
+C:\Users\user\source\repos\LibraryProject\NotificationsServiceHost\obj\Debug\NotificationsServiceHost.pdb

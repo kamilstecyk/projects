@@ -46,6 +46,19 @@ namespace LibraryProject
             string[] allCurrencies = FilteringBooksActions.getAllCurrenciesOfBooks();
             FrontendActions.RefreshAndAddToComboBox(comboBoxCurrencyFilter, allCurrencies);
 
+
+
+            // we check if we have Notification about oncoming end of leasing of books
+
+            string notificationResponse = NotificationsActions.getNotificationsAboutEndingLeasingOfBooks(loggedUserID);
+
+            Console.WriteLine("logged user ID: " + loggedUserID + " response notification: " + notificationResponse);
+
+            if(notificationResponse.Length > 0)
+            {
+                Messages.displayMessageBox(notificationResponse);
+            }
+
         }
 
         private void LeaseBookButton_Click(object sender, EventArgs e)

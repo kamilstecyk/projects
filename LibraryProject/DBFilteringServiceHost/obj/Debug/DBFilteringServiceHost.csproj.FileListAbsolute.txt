@@ -1,0 +1,13 @@
+C:\Users\user\source\repos\LibraryProject\DBFilteringServiceHost\bin\Debug\DBFilteringServiceHost.exe.config
+C:\Users\user\source\repos\LibraryProject\DBFilteringServiceHost\bin\Debug\DBFilteringServiceHost.exe
+C:\Users\user\source\repos\LibraryProject\DBFilteringServiceHost\bin\Debug\DBFilteringServiceHost.pdb
+C:\Users\user\source\repos\LibraryProject\DBFilteringServiceHost\bin\Debug\DBFilteringService.dll
+C:\Users\user\source\repos\LibraryProject\DBFilteringServiceHost\bin\Debug\EntityFramework.dll
+C:\Users\user\source\repos\LibraryProject\DBFilteringServiceHost\bin\Debug\DBFilteringService.pdb
+C:\Users\user\source\repos\LibraryProject\DBFilteringServiceHost\bin\Debug\DBFilteringService.dll.config
+C:\Users\user\source\repos\LibraryProject\DBFilteringServiceHost\bin\Debug\EntityFramework.xml
+C:\Users\user\source\repos\LibraryProject\DBFilteringServiceHost\obj\Debug\DBFilteringServiceHost.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\LibraryProject\DBFilteringServiceHost\obj\Debug\DBFilteringServiceHost.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\LibraryProject\DBFilteringServiceHost\obj\Debug\DBFilteringServiceHost.csproj.CopyComplete
+C:\Users\user\source\repos\LibraryProject\DBFilteringServiceHost\obj\Debug\DBFilteringServiceHost.exe
+C:\Users\user\source\repos\LibraryProject\DBFilteringServiceHost\obj\Debug\DBFilteringServiceHost.pdb

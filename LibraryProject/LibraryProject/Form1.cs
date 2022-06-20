@@ -13,6 +13,8 @@ namespace LibraryProject
 
     // we create admin manually, inserting credentials directly to DB  with role = "Admin"
 
+    // e.g. admin123 Adminek123
+
     public partial class Form1 : Form
     {
 
