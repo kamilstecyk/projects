@@ -8,11 +8,17 @@ const DisplayRandomKitten = () => {
   
 
   const [fact,setFact] = useState([]);
+  const [change,setChange] = useState(false);
 
 
   useEffect(() => {
     getDataFromApi('https://catfact.ninja/fact')
   }, []);  // this use effect is activate only once when the page is loade
+
+  useEffect(() => {
+    getDataFromApi('https://catfact.ninja/fact')
+  }, [change]);  // this use effect is activate only once when the page is loade
+
 
 
   async function getDataFromApi(url = '') {
@@ -40,7 +46,8 @@ const DisplayRandomKitten = () => {
 
   const handler = (e) =>
   {
-    window.location.reload(true); // we want to refresh page to get another random fact from API
+    //window.location.reload(true); // we want to refresh page to get another random fact from API
+    setChange(!change);
   }
 
 

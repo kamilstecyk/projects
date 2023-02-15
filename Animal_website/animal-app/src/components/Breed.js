@@ -14,9 +14,9 @@ const breed = (props) => {
           <br/> <a  style={{textDecoration : 'none'}} target="_blank" href = {props.wikiUrl}>Wikipedia URL</a>
           
       </div>
-      <div className='imgCat'>
+      {/* <div className='imgCat'>
         <img style={{height : '100%',width : '100%', objectFit : 'contain'}} src={props.imgUrl} alt="kitten"/>
-      </div>
+      </div> */}
     </div>
   )
 }

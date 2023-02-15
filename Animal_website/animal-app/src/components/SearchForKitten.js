@@ -24,7 +24,7 @@ const SearchForKitten = () => {
   }, []);  // this use effect is activate only once when the page is loade
 
 
-  async function getDataFromApi(url = '') {
+  async function getDataFromApi(url) {
     // Default options are marked with *
     const response = await fetch(url, {
       method: 'GET', // *GET, POST, PUT, DELETE, etc.
@@ -43,6 +43,7 @@ const SearchForKitten = () => {
     setBreeds(data);
 
     console.log(data);
+    console.log("here!!!");
     //console.log(data[0].name)
   }
 
@@ -51,7 +52,7 @@ const SearchForKitten = () => {
     setValue(event.target.value);
     //console.log(event.target.options.selectedIndex);  // we need to have selectred index to later generate card for partivcular breed
     setSelected(event.target.options.selectedIndex);
-    //console.log(breeds[selected].name);
+    console.log(breeds[selected]);
 
   };
   
@@ -76,7 +77,7 @@ const SearchForKitten = () => {
       
 
       {breeds.length > 0 &&
-        <Breed  name={breeds[selected].name}  origin ={breeds[selected].origin} temperament={breeds[selected].temperament} wikiUrl = {breeds[selected].wikipedia_url} lifeSpan = {breeds[selected].life_span}   imgUrl = {breeds[selected].image.url}  desc = {breeds[selected].description} />
+        <Breed  name={breeds[selected].name}  origin ={breeds[selected].origin} temperament={breeds[selected].temperament} wikiUrl = {breeds[selected].wikipedia_url != null ? breeds[selected].wikipedia_url : null} lifeSpan = {breeds[selected].life_span}   imgUrl = {breeds[selected].image != null ? breeds[selected].image.url : null}  desc = {breeds[selected].description} />
       }
 
       
