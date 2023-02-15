@@ -1,0 +1,81 @@
+C:\Users\user\source\repos\RPC_manager\RPC_manager\bin\Debug\RPC_manager.exe.config
+C:\Users\user\source\repos\RPC_manager\RPC_manager\bin\Debug\RPC_manager.exe
+C:\Users\user\source\repos\RPC_manager\RPC_manager\bin\Debug\RPC_manager.pdb
+C:\Users\user\source\repos\RPC_manager\RPC_manager\bin\Debug\EntityFramework.dll
+C:\Users\user\source\repos\RPC_manager\RPC_manager\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\source\repos\RPC_manager\RPC_manager\bin\Debug\EntityFramework.xml
+C:\Users\user\source\repos\RPC_manager\RPC_manager\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.Form1.resources
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.Properties.Resources.resources
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.csproj.GenerateResource.cache
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.csproj.CopyComplete
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.exe
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.pdb
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.RegistrationForm.resources
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.ChangePassword.resources
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.MainForm.resources
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.Migrations.InitialCreate.resources
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.Migrations.DataCreating.resources
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.Migrations.DataUpdate.resources
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.Migrations.DataUpdate2.resources
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.Migrations.DataUpdate3.resources
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.Migrations.updateDb4.resources
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.AddForm.resources
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.Migrations.updateDB5.resources
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.Migrations.updateDB6.resources
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.Migrations.addedconstructors.resources
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.Migrations.uniqueCategories.resources
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.Migrations.updateCoppice.resources
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.Migrations.another.resources
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.Migrations.update1.resources
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.Migrations.updatecategoryid.resources
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.Migrations.datetimeUpdate.resources
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.Migrations.up.resources
+C:\Users\user\source\repos\RPC_manager\RPC_manager\obj\Debug\RPC_manager.DisplayForm.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\bin\Debug\RPC_manager.exe.config
+C:\Users\user\Desktop\rpg manager\RPC_manager\bin\Debug\RPC_manager.exe
+C:\Users\user\Desktop\rpg manager\RPC_manager\bin\Debug\RPC_manager.pdb
+C:\Users\user\Desktop\rpg manager\RPC_manager\bin\Debug\EntityFramework.dll
+C:\Users\user\Desktop\rpg manager\RPC_manager\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\Desktop\rpg manager\RPC_manager\bin\Debug\EntityFramework.xml
+C:\Users\user\Desktop\rpg manager\RPC_manager\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.AddForm.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.ChangePassword.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.DisplayForm.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.EditForm.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Form1.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.MainForm.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Migrations.InitialCreate.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Migrations.DataCreating.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Migrations.DataUpdate.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Migrations.DataUpdate2.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Migrations.DataUpdate3.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Migrations.updateDb4.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Migrations.updateDB5.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Migrations.updateDB6.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Migrations.addedconstructors.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Migrations.uniqueCategories.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Migrations.updateCoppice.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Migrations.another.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Migrations.update1.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Migrations.updatecategoryid.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Migrations.datetimeUpdate.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Migrations.up.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Properties.Resources.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.RegistrationForm.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.csproj.GenerateResource.cache
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.csproj.CopyComplete
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.exe
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.pdb
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.RemoveForm.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Migrations.removal.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Migrations.addRole.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Migrations.addRole1.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Migrations.addRole2.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.EditPasswordsForm.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Migrations.uniqueElements.resources
+C:\Users\user\Desktop\rpg manager\RPC_manager\obj\Debug\RPC_manager.Migrations.uniqEl.resources

@@ -1,0 +1,6 @@
+C:\Users\user\source\repos\LibraryProject\DatabaseMicroServiceHost\bin\Debug\DatabaseMicroServiceHost.exe.config
+C:\Users\user\source\repos\LibraryProject\DatabaseMicroServiceHost\bin\Debug\DatabaseMicroServiceHost.exe
+C:\Users\user\source\repos\LibraryProject\DatabaseMicroServiceHost\bin\Debug\DatabaseMicroServiceHost.pdb
+C:\Users\user\source\repos\LibraryProject\DatabaseMicroServiceHost\obj\Debug\DatabaseMicroServiceHost.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\LibraryProject\DatabaseMicroServiceHost\obj\Debug\DatabaseMicroServiceHost.exe
+C:\Users\user\source\repos\LibraryProject\DatabaseMicroServiceHost\obj\Debug\DatabaseMicroServiceHost.pdb

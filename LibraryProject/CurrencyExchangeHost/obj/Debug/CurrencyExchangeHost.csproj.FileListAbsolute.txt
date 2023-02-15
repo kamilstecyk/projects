@@ -1,0 +1,11 @@
+C:\Users\user\source\repos\LibraryProject\CurrencyExchangeHost\bin\Debug\CurrencyExchangeHost.exe.config
+C:\Users\user\source\repos\LibraryProject\CurrencyExchangeHost\bin\Debug\CurrencyExchangeHost.exe
+C:\Users\user\source\repos\LibraryProject\CurrencyExchangeHost\bin\Debug\CurrencyExchangeHost.pdb
+C:\Users\user\source\repos\LibraryProject\CurrencyExchangeHost\bin\Debug\CurrencyExchangeService.dll
+C:\Users\user\source\repos\LibraryProject\CurrencyExchangeHost\bin\Debug\CurrencyExchangeService.pdb
+C:\Users\user\source\repos\LibraryProject\CurrencyExchangeHost\bin\Debug\CurrencyExchangeService.dll.config
+C:\Users\user\source\repos\LibraryProject\CurrencyExchangeHost\obj\Debug\CurrencyExchangeHost.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\LibraryProject\CurrencyExchangeHost\obj\Debug\CurrencyExchangeHost.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\LibraryProject\CurrencyExchangeHost\obj\Debug\CurrencyExchangeHost.csproj.CopyComplete
+C:\Users\user\source\repos\LibraryProject\CurrencyExchangeHost\obj\Debug\CurrencyExchangeHost.exe
+C:\Users\user\source\repos\LibraryProject\CurrencyExchangeHost\obj\Debug\CurrencyExchangeHost.pdb
